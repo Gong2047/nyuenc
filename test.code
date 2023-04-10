@@ -1,0 +1,130 @@
+// test if the add_queue function works by adding 3 tasks to the queue
+struct task_queue *queue = init_task_queue();
+
+struct task *task = malloc(sizeof(struct task));
+
+task->addr = "test";
+task->size = 4;
+task->file_index = 1;
+task->section_index = 1;
+task->next = NULL;
+add_task(queue, task);
+
+task = malloc(sizeof(struct task));
+task->addr = "test2";
+task->size = 5;
+task->file_index = 2;
+task->section_index = 2;
+task->next = NULL;
+add_task(queue, task);
+
+task = malloc(sizeof(struct task));
+task->addr = "test3";
+task->size = 6;
+task->file_index = 3;
+task->section_index = 3;
+task->next = NULL;
+add_task(queue, task);
+
+// test if the get_queue function works by getting the tasks from the queue
+task = get_task(queue);
+printf("task addr: %s\n", task->addr);
+printf("task size: %zu\n", task->size);
+printf("task file index: %d\n", task->file_index);
+printf("task section index: %d\n", task->section_index);
+printf("task next: %p\n", task->next);
+
+task = get_task(queue);
+printf("task addr: %s\n", task->addr);
+printf("task size: %zu\n", task->size);
+printf("task file index: %d\n", task->file_index);
+printf("task section index: %d\n", task->section_index);
+printf("task next: %p\n", task->next);
+
+task = queue->head;
+printf("task addr: %s\n", task->addr);
+printf("task size: %zu\n", task->size);
+printf("task file index: %d\n", task->file_index);
+printf("task section index: %d\n", task->section_index);
+printf("task next: %p\n", task->next);
+
+// // test if the add_queue function works
+    // TaskQueue *queue = malloc(sizeof(TaskQueue));
+    // queue->head = NULL;
+    // queue->tail = NULL;
+    
+    // Task *task = malloc(sizeof(struct task));
+    
+    // task->addr = "test";
+    // task->size = 4;
+    // task->file_index = 1;
+    // task->section_index = 1;
+    // task->next = NULL;
+    // add_task(queue, task);
+
+    // task = malloc(sizeof(struct task));
+    
+    // task->addr = "test2";
+    // task->size = 5;
+    // task->file_index = 2;
+    // task->section_index = 2;
+    // task->next = NULL;
+    // add_task(queue, task);
+    
+    // task = malloc(sizeof(struct task));
+    
+    // task->addr = "test3";
+    // task->size = 6;
+    // task->file_index = 3;
+    // task->section_index = 3;
+    // task->next = NULL;
+    // add_task(queue, task);
+
+    // // test if the get_queue function works by getting the tasks from the queue
+    
+    // task = queue->head;
+    // printf("task addr: %s\n", task->addr);
+    // printf("task size: %zu\n", task->size);
+    // printf("task file index: %d\n", task->file_index);
+    // printf("task section index: %d\n", task->section_index);
+    // printf("task next: %p\n\n", task->next);
+    
+    // task = queue->tail;
+    // printf("task addr: %s\n", task->addr);
+    // printf("task size: %zu\n", task->size);
+    // printf("task file index: %d\n", task->file_index);
+    // printf("task section index: %d\n", task->section_index);
+    // printf("task next: %p\n\n", task->next);
+    
+    // task = get_task(queue);
+
+    // task = queue->head;
+    // printf("task addr: %s\n", task->addr);
+    // printf("task size: %zu\n", task->size);
+    // printf("task file index: %d\n", task->file_index);
+    // printf("task section index: %d\n", task->section_index);
+    // printf("task next: %p\n\n", task->next);
+    
+    // task = get_task(queue);
+
+    // task = queue->head;
+    // printf("task addr: %s\n", task->addr);
+    // printf("task size: %zu\n", task->size);
+    // printf("task file index: %d\n", task->file_index);
+    // printf("task section index: %d\n", task->section_index);
+    // printf("task next: %p\n\n", task->next);
+    
+    // task = get_task(queue);
+    // printf("task addr: %s\n", task->addr);
+    // printf("task size: %zu\n", task->size);
+    // printf("task file index: %d\n", task->file_index);
+    // printf("task section index: %d\n", task->section_index);
+    // printf("task next: %p\n\n", task->next);
+    
+    // task = queue->head;
+    // printf("task: %p\n", task);
+    
+    // task = queue->tail;
+    // printf("task: %d\n", task);
+
+
